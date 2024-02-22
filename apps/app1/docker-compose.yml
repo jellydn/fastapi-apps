@@ -1,0 +1,19 @@
+version: "3"
+services:
+  traefik:
+    restart: unless-stopped
+    image: traefik:latest
+    command: --providers.docker=true
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  fastapi-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.http.routers.fastapi-demo.rule=Host(`fastapi-demo.traefik.me`)"
+      - "traefik.http.services.fastapi-demo.loadbalancer.server.port=8000"
+    environment:
+      PORT: 8000

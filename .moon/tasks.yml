@@ -1,0 +1,12 @@
+tasks:
+  test:
+    command: "make test"
+    local: true
+  dev:
+    command: "make dev"
+    local: true
+  debug:
+    command: "make debug"
+    local: true
+  install:
+    command: "make install"
