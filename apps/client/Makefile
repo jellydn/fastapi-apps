@@ -13,6 +13,11 @@ generate-client:
 	@echo "Generating client..."
 	@bun run generate-client
 
+.PHONY: test
+test:
+	@echo "Running tests..."
+	@bun test
+
 .PHONY: help
 help:
 	@echo "Available targets:"
