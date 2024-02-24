@@ -2,20 +2,20 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
-import type { ResponseMessage } from '../models/ResponseMessage';
+import type { app__routers__users__ResponseMessage } from '../models/app__routers__users__ResponseMessage';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class UsersService {
     constructor(public readonly httpRequest: BaseHttpRequest) {}
     /**
      * Create User
-     * @returns ResponseMessage Successful Response
+     * @returns app__routers__users__ResponseMessage Successful Response
      * @throws ApiError
      */
-    public createUserUsersPost(): CancelablePromise<ResponseMessage> {
+    public createUserUsersPost(): CancelablePromise<app__routers__users__ResponseMessage> {
         return this.httpRequest.request({
             method: 'POST',
-            url: '/users/',
+            url: '/users',
         });
     }
 }

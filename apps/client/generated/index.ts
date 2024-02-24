@@ -10,9 +10,10 @@ export { CancelablePromise, CancelError } from './core/CancelablePromise';
 export { OpenAPI } from './core/OpenAPI';
 export type { OpenAPIConfig } from './core/OpenAPI';
 
+export type { app__routers__items__ResponseMessage } from './models/app__routers__items__ResponseMessage';
+export type { app__routers__users__ResponseMessage } from './models/app__routers__users__ResponseMessage';
 export type { HelloMessage } from './models/HelloMessage';
 export type { Item } from './models/Item';
-export type { ResponseMessage } from './models/ResponseMessage';
 
 export { ItemsService } from './services/ItemsService';
 export { RootService } from './services/RootService';

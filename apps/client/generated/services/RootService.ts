@@ -9,6 +9,7 @@ export class RootService {
     constructor(public readonly httpRequest: BaseHttpRequest) {}
     /**
      * Read Root
+     * Return a simple hello world message
      * @returns HelloMessage Successful Response
      * @throws ApiError
      */
