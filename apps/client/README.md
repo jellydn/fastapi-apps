@@ -14,7 +14,15 @@ bun install
 
 ## Usage
 
-To run:
+1. First, generate the client by running the following command:
+
+Make sure you have run `moon run app1:dev` before running the following command.
+
+```bash
+bun run generate-client
+```
+
+2. Then, run the client app:
 
 ```bash
 bun run index.ts
