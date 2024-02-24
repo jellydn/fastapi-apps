@@ -14,8 +14,8 @@
 - **Python**: You have installed Python 3.8 or higher. If you need to install a specific version of Python, we recommend using [pyenv](https://github.com/pyenv/pyenv).
 - **Moon**: You have installed [Moon](https://moonrepo.dev/), which is used to manage this monorepo.
 - **Dependency Management Tools**: Depending on the application, you will need different tools:
-  - For App 1, you need [Poetry](https://python-poetry.org) for dependency management.
-  - For App 2, you need pip, which is typically installed with Python.
+  - For App 1, you need pip, which is typically installed with Python.
+  - For App 2, you need [Poetry](https://python-poetry.org) for dependency management.
 
 ### Installation
 
@@ -33,6 +33,12 @@ Use Moon to run the apps:
 #### Run Tests
 
 - Run App 2 with `moon run app2:test`
+
+## Resources
+
+- [Tutorial - User Guide - FastAPI](https://fastapi.tiangolo.com/tutorial/)
+- [FastAPI Best Practices and Conventions we used at our startup](https://github.com/zhanymkanov/fastapi-best-practices)
+- [Full stack, modern web application generator. Using FastAPI, PostgreSQL as database, Docker, automatic HTTPS and more.](https://github.com/tiangolo/full-stack-fastapi-postgresql)
 
 ## Author
 
