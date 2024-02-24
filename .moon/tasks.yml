@@ -10,3 +10,5 @@ tasks:
     local: true
   install:
     command: "make install"
+  generate-client:
+    command: "make generate-client"

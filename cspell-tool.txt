@@ -1,4 +1,14 @@
 uvicorn
 fastapi
 pydantic
+Plumbus
 traefik
+codegen
+pyenv
+Huynh
+jellydn
+kofi
+buymeacoffee
+automerge
+docstrings
+sweepai

@@ -1,5 +1,3 @@
-from typing import Union
-
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -19,22 +17,42 @@ app.add_middleware(
 class Item(BaseModel):
     name: str
     price: float
-    is_offer: Union[bool, None] = None
 
 
-@app.get("/")
+class User(BaseModel):
+    username: str
+    email: str
+
+
+class HelloMessage(BaseModel):
+    Hello: str
+
+
+class ResponseMessage(BaseModel):
+    message: str
+
+
+@app.get("/", response_model=HelloMessage, tags=["root"])
 def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+@app.post("/items/", response_model=ResponseMessage, tags=["items"])
+async def create_item():
+    return {"message": "Item received"}
 
 
-@app.put("/items/{item_id}")
-def update_item(item_id: int, item: Item):
-    return {"item_name": item.name, "item_id": item_id}
+@app.get("/items/", response_model=list[Item], tags=["items"])
+async def get_items():
+    return [
+        {"name": "Plumbus", "price": 3},
+        {"name": "Portal Gun", "price": 9001},
+    ]
+
+
+@app.post("/users/", response_model=ResponseMessage, tags=["users"])
+async def create_user():
+    return {"message": "User received"}
 
 
 if __name__ == "__main__":

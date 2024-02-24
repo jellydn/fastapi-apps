@@ -1,0 +1,19 @@
+{
+  "name": "client",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "generate-client": "openapi --input http://localhost:8000/openapi.json --output ./generated --client node --useOptions --useUnionTypes --name FastApiDemoClient"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/node-fetch": "2",
+    "abort-controller": "3",
+    "form-data": "4",
+    "node-fetch": "2",
+    "openapi-typescript-codegen": "^0.27.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
