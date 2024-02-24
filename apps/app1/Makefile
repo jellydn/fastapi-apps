@@ -18,5 +18,7 @@ install-dev:
 
 .PHONY: test
 test:
+	@echo "Installing test requirements..."
+	pip install --no-cache-dir -r requirements-dev.txt
 	@echo "Running tests..."
 	pytest

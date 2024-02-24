@@ -12,3 +12,4 @@ buymeacoffee
 automerge
 docstrings
 sweepai
+moonrepo

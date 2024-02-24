@@ -1,7 +1,8 @@
 tasks:
   test:
     command: "make test"
-    local: true
+    options:
+      runInCI: true
   dev:
     command: "make dev"
     local: true
