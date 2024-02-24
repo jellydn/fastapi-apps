@@ -11,10 +11,11 @@
 
 ### Prerequisites
 
-- Python 3.8 or higher
-- [Moon](https://moonrepo.dev/)
-  - [Poetry](https://python-poetry.org) (for App 1)
-  - pip (for App 2)
+- **Python**: You have installed Python 3.8 or higher. If you need to install a specific version of Python, we recommend using [pyenv](https://github.com/pyenv/pyenv).
+- **Moon**: You have installed [Moon](https://moonrepo.dev/), which is used to manage this monorepo.
+- **Dependency Management Tools**: Depending on the application, you will need different tools:
+  - For App 1, you need [Poetry](https://python-poetry.org) for dependency management.
+  - For App 2, you need pip, which is typically installed with Python.
 
 ### Installation
 
