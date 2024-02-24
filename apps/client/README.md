@@ -1,4 +1,6 @@
-<h1 align="center">Welcome to client app 👋</h1>
+"""
+This file contains the client app that interacts with the FastAPI server.
+"""<h1 align="center">Welcome to client app 👋</h1>
 
 ## Pre-requisites
 
