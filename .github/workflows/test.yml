@@ -16,20 +16,21 @@ jobs:
       matrix:
         python-version:
           - "3.12"
-          - "3.11"
-          - "3.10"
-          - "3.9"
-          - "3.8"
+        poetry-version:
+          - "1.7.1"
       fail-fast: false
     steps:
       - uses: actions/checkout@v4
       - uses: "moonrepo/setup-toolchain@v0"
-        with:
-          auto-install: true
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Setup poetry
+        uses: abatilo/actions-poetry@v3
+        with:
+          poetry-version: ${{ matrix.poetry-version }}
+      - uses: oven-sh/setup-bun@v1
       - name: Install Dependencies
         run: moon run :install
       - name: Test
