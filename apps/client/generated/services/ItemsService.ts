@@ -2,8 +2,8 @@
 /* istanbul ignore file */
 /* tslint:disable */
 /* eslint-disable */
+import type { app__routers__items__ResponseMessage } from '../models/app__routers__items__ResponseMessage';
 import type { Item } from '../models/Item';
-import type { ResponseMessage } from '../models/ResponseMessage';
 import type { CancelablePromise } from '../core/CancelablePromise';
 import type { BaseHttpRequest } from '../core/BaseHttpRequest';
 export class ItemsService {
@@ -16,18 +16,18 @@ export class ItemsService {
     public getItemsItemsGet(): CancelablePromise<Array<Item>> {
         return this.httpRequest.request({
             method: 'GET',
-            url: '/items/',
+            url: '/items',
         });
     }
     /**
      * Create Item
-     * @returns ResponseMessage Successful Response
+     * @returns app__routers__items__ResponseMessage Successful Response
      * @throws ApiError
      */
-    public createItemItemsPost(): CancelablePromise<ResponseMessage> {
+    public createItemItemsPost(): CancelablePromise<app__routers__items__ResponseMessage> {
         return this.httpRequest.request({
             method: 'POST',
-            url: '/items/',
+            url: '/items',
         });
     }
 }
