@@ -6,7 +6,7 @@ dev:
 .PHONE: debug
 debug:
 	@echo "Starting development server in debug mode..."
-	@python3 app/main.py
+	@python3 -m app.main
 
 .PHONY: install
 install:

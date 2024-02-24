@@ -1,10 +1,20 @@
+import os
+
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+from .routers import items, users
+
+# Define the FastAPI app
 app = FastAPI()
 
+# -------------------
+# Middleware Setup
+# -------------------
+
+# Add CORS middleware to allow all origins, methods, and headers
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -13,47 +23,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-class Item(BaseModel):
-    name: str
-    price: float
-
-
-class User(BaseModel):
-    username: str
-    email: str
+# -------------------
+# Model Definitions
+# -------------------
 
 
 class HelloMessage(BaseModel):
     Hello: str
 
 
-class ResponseMessage(BaseModel):
-    message: str
+# -------------------
+# Route Definitions
+# -------------------
 
 
 @app.get("/", response_model=HelloMessage, tags=["root"])
 def read_root():
+    """Return a simple hello world message"""
     return {"Hello": "World"}
 
 
-@app.post("/items/", response_model=ResponseMessage, tags=["items"])
-async def create_item():
-    return {"message": "Item received"}
+app.include_router(items.router)
+app.include_router(users.router)
 
 
-@app.get("/items/", response_model=list[Item], tags=["items"])
-async def get_items():
-    return [
-        {"name": "Plumbus", "price": 3},
-        {"name": "Portal Gun", "price": 9001},
-    ]
-
-
-@app.post("/users/", response_model=ResponseMessage, tags=["users"])
-async def create_user():
-    return {"message": "User received"}
-
-
+# -------------------
+# Main execution for debugging
+# -------------------
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(app, host=host, port=port)
