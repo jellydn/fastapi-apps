@@ -48,7 +48,8 @@ fly launch
   - [Testing](https://fastapi.tiangolo.com/tutorial/testing/)
   - [Generate Clients](https://fastapi.tiangolo.com/advanced/generate-clients/)
   - [FastAPI in Containers](https://fastapi.tiangolo.com/deployment/docker/)
-  - [Bigger Applications - Multiple Files - FastAPI](https://fastapi.tiangolo.com/tutorial/bigger-applications/)
+  - [Middleware](https://fastapi.tiangolo.com/tutorial/middleware/)
+  - [Bigger Applications - Multiple Files](https://fastapi.tiangolo.com/tutorial/bigger-applications/)
 
 ## Show your support
 
