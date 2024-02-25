@@ -4,9 +4,9 @@
 
 ## Applications
 
-1. **[App 1](./apps/app1/README.md)**: This application is set up using the `poetry` approach for dependency management.
-2. **[App 2](./apps/app2/README.md)**: This application is set up using the traditional `requirements.txt` approach for dependency management.
-3. **[Client](./apps/client/README.md)**: This is a client app that interacts with the FastAPI server.
+2. **[App 1](./apps/app1/README.md)**: This application is set up using the traditional `requirements.txt` approach for dependency management.
+1. **[App 2](./apps/app2/README.md)**: This application is set up using the `poetry` approach for dependency management.
+1. **[Client](./apps/client/README.md)**: This is a client app that interacts with the FastAPI server.
 
 ## Getting Started
 
