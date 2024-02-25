@@ -2,6 +2,8 @@
 
 > This repository contains two demo applications built with [FastAPI](https://fastapi.tiangolo.com), managed as a monorepo using [Moon](https://moonrepo.dev).
 
+[![IT Man - From Setup to Deployment: A Dual Demo of FastAPI Applications](https://i.ytimg.com/vi/YrBqX-lvSgk/hqdefault.jpg)](https://www.youtube.com/watch?v=YrBqX-lvSgk)
+
 ## Applications
 
 2. **[App 1](./apps/app1/README.md)**: This application is set up using the traditional `requirements.txt` approach for dependency management.
