@@ -24,9 +24,11 @@ def test_add_process_time_header():
     assert response.status_code == 200
     assert "X-Process-Time" in response.headers
 
-    # Test different headers in the request
+    # # Test different headers in the request
     headers = {"Authorization": "Bearer token"}
-    response = client.get("/", headers=headers)
+    response = client.get("/")
+    assert response == {"message": "Mock response"}
+    assert "X-Process-Time" in response.headers"/", headers=headers)
     assert response.status_code == 200
     assert "X-Process-Time" in response.headers
 
@@ -34,6 +36,6 @@ def test_add_process_time_header():
     async def mock_call_next(request):
         return {"message": "Mock response"}
 
-    response = await app.add_process_time_header(None, mock_call_next)
+    def test_add_process_time_header():
     assert response == {"message": "Mock response"}
     assert "X-Process-Time" in response.headers
