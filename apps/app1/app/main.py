@@ -27,6 +27,18 @@ app.add_middleware(
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
+    """
+    Middleware function to add a process time header to the response.
+
+    This function calculates the time taken to process a request and adds it as a header to the response.
+
+    Parameters:
+        request (Request): The incoming request object.
+        call_next (Callable): The next middleware or endpoint to call.
+
+    Returns:
+        Response: The response object with the process time header added.
+    """
     start_time = time.time()
     response = await call_next(request)
     process_time = time.time() - start_time
