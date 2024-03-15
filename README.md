@@ -42,6 +42,7 @@ Use Moon to run the apps:
 - [Tutorial - User Guide - FastAPI](https://fastapi.tiangolo.com/tutorial/)
 - [FastAPI Best Practices and Conventions we used at our startup](https://github.com/zhanymkanov/fastapi-best-practices)
 - [Full stack, modern web application generator. Using FastAPI, PostgreSQL as database, Docker, automatic HTTPS and more.](https://github.com/tiangolo/full-stack-fastapi-postgresql)
+- [astral-sh/rye: a Hassle-Free Python Experience](https://github.com/astral-sh/rye)
 
 ## Author
 
