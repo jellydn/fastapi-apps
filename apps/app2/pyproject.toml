@@ -6,9 +6,9 @@ authors = ["Huynh Duc Dung <dunghd.it@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.4"
-fastapi = "0.112.0"
-uvicorn = "0.30.5"
+python = "3.12.5"
+fastapi = "0.112.1"
+uvicorn = "0.30.6"
 
 
 [tool.poetry.group.test.dependencies]
