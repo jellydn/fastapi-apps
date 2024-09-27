@@ -6,14 +6,14 @@ authors = ["Huynh Duc Dung <dunghd.it@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.12.5"
-fastapi = "0.114.0"
-uvicorn = "0.30.6"
+python = "3.12.6"
+fastapi = "0.115.0"
+uvicorn = "0.31.0"
 
 
 [tool.poetry.group.test.dependencies]
 httpx = "0.27.2"
-pytest = "8.3.2"
+pytest = "8.3.3"
 
 [build-system]
 requires = ["poetry-core"]
