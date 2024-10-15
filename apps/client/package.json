@@ -9,7 +9,7 @@
     "@types/bun": "latest",
     "@types/node-fetch": "2.6.11",
     "abort-controller": "3.0.0",
-    "form-data": "4.0.0",
+    "form-data": "4.0.1",
     "node-fetch": "2.7.0",
     "openapi-typescript-codegen": "0.29.0"
   },
