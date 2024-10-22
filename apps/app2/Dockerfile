@@ -1,4 +1,4 @@
-FROM python:3.12 as requirements-stage
+FROM python:3.13 as requirements-stage
 
 WORKDIR /tmp
 
@@ -9,7 +9,7 @@ COPY ./pyproject.toml ./poetry.lock* /tmp/
 # Generate requirements.txt from pyproject.toml
 RUN poetry export -f requirements.txt --output requirements.txt --without-hashes
 
-FROM python:3.12-slim
+FROM python:3.13-slim
 
 WORKDIR /code
 
